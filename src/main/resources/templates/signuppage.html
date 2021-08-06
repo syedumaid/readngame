@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Registration</title>
+	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link href="https://getbootstrap.com/docs/4.0/examples/signup/signup.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<style>
+    @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+    body {
+          font-family: 'Poppins', sans-serif;
+          background-color: #1a1a2e;
+          padding-top: 40px;
+          padding-bottom: 40px;
+          background-image:url(./images/login4.gif);
+          background-repeat: no-repeat, repeat;
+          background-size: cover;
+    }
+    html {
+        font-family: sans-serif;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+    }
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+    h1{
+          color: #6d7fcc;
+    }
+    label,p{
+        color: #6d7fcc;
+    }
+     .container{
+        	width:525px;
+        	height:550px;
+            margin-top:3%;
+        	margin-right:5%;
+        	
+        }
+         .brand-name{ 
+         	float:left; 
+         	font-size:1.5em;
+         	margin-top:10%;
+         	margin-left:7%;
+        } 
+         .head{
+        	background-color:#1a1a2e transparent;
+        	margin:55px;
+        	padding-top:10px;
+        	padding-bottom:50px;
+        	
+        	
+        }
+</style>
+<body>
+<div class="head">
+
+		<div class="brand-name" >
+      		<h1 style="font-size:2.5em;" >Plebeian</h1>
+      		<p>The Atmosphere built for you</p>
+      </div>
+	<div class="container text-center">
+		<div style="margin-left:12%;">
+			<h1>Sign-Up</h1>
+		</div>
+		
+		<form th:action="@{/process_register}" method="post"
+			th:object="${user}" style="max-width:600px; margin:0 auto;">
+			
+			<div class="m-3">
+			
+				<div class="form-group row">
+					<label class="col-form-label col-4"></label>
+					<div class="col-8">
+						<input type="email" class="form-control" placeholder="Email"
+						th:field="*{email}" required/>
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4"></label>
+					<div class="col-8">
+						<input type="password" class="form-control" placeholder="Password"
+							th:field="*{password}" required minlength="6" maxlength="10"/>
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4"></label>
+					<div class="col-8">
+						<input type="text" class="form-control"  placeholder="First Name"
+						th:field="*{firstName}" required minlength="2" maxlength="20"/>
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label col-4"></label>
+					<div class="col-8">
+						<input type="text" class="form-control" placeholder="Last Name"
+						th:field="*{lastName}" required minlength="2" maxlength="20"/>
+					</div>
+				</div>
+				<div>
+					<button type="submit" class="btn btn-primary" style="margin-left:35%;width:65%;font-size:1.3em;">Sign Up</button>
+				</div>
+				<br>
+				<p style="margin-left:25%;">Already a User?<a th:href="@{/login}">Click here</a></p>
+			</div>
+		</form>
+	
+	</div>
+	</div>
+
+</body>
+</html>

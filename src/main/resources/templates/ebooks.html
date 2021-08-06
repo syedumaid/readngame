@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Books</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+    <script
+		src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./css/Books/style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!-- <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> -->
+   
+</head>
+
+<body id="page-top">
+    <!-- <a class="menu-toggle rounded" href="#">
+         <i class="fa fa-bars"></i> 
+    </a>-->
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="sidebar-header">
+                <h3>Read n Game</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Your Place to be</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Gaming</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a th:href="@{/index#UpcomingGames}">Coming Soon</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/index#TopRatedGames}">Top Rated</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/index#LatestGames}">Recent Releases</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/index#OnlineMultiplayers}">Online Multiplayers</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/index#ClassicGames}">Classics</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/index#OtherGames}">Other</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">E-Books</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#ComingSoon">Coming Soon</a>
+                        </li>
+                        <li>
+                            <a href="#Paperback">Paperback</a>
+                        </li>
+                        <li>
+                            <a href="#SciFi">Sci-Fi</a>
+                        </li>
+                        <li>
+                            <a href="#Romance">Romance</a>
+                        </li>
+                        <li>
+                            <a href="#Mystery">Mystery</a>
+                        </li>
+                        <li>
+                            <a href="#Horror">Horror</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Minigames</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+            </ul>
+
+            <!--  
+                <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li>
+            </ul>
+            --> 
+        </nav>
+        
+
+        <!-- Page Content  -->
+        <div id="content">
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="navbar">
+                
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" 
+                    data-toggle="collapse" data-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button> 
+                    
+                </div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent"style="spacing:0.5%;">
+                    
+                        <ul class="nav navbar-nav ml-auto" >
+                        <li class="nav-item">
+                        <p>Welcome <span style="color:violet;text-transform:uppercase;">[[${#request.userPrincipal.principal.fullName}]]</span></p>
+                        </li>
+                        
+                        <li class="nav-item" style="text-indent:2em;">
+                         <form th:action = "@{logout}" method = "post">
+							<input style="background-color:#1a1a2e;color:#f3e6e3;"type = "submit" value = "Sign Out" />
+							</form>
+                         </li>
+                        
+                       		
+                        </ul>
+                       
+                    </div>
+                   
+                   
+                
+                
+                </nav>
+           
+                
+            
+
+            <!--header -->
+            <header class="masthead d-flex">
+                <div class="container text-center my-auto">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 class="mb-1"><span>A Song of Ice and Fire Series</span></h1>
+                    <h5 class="mb-5" style="color:#000;"><em>Available on amazon</em></h5>
+                    <!--<a href="#" class="btn btn-primary btn-xl js-scroll-trigger">Watch Trailer</a>
+                    <a href="#" class="btn btn-primary btn-xl js-scroll-trigger">Watch Gameplay</a> -->
+                    <a href="https://www.amazon.in/Song-Ice-Fire-Thrones-Complete/dp/0007477155/ref=sr_1_2?crid=CBX0U134QKR6&dchild=1&keywords=game+of+thrones&qid=1621867449&s=books&sprefix=game+of+thrones%2Cstripbooks%2C282&sr=1-2 ">buy now</a>
+                    <br>
+                    <a href="https://books.google.co.in/books?id=JPDOSzE7Bo0C&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false">preview</a>
+                </div>
+                <div class="overlay">
+    
+                </div>
+            </header>
+            <div class="modal fade" id="myModalPrev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <img src="close.png" class="close" data-dismiss="modal" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                         <!--<div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                            <h4 id="myModalLabel" class="semi-bold">a way out<strong></strong>.</h4> 
+                        </div>
+                        <hr>-->
+                        <div class="modal-body" id="trailer">
+                            Modal Content
+                        </div>
+                        <!--<hr>
+                        <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-primary"><i class="fa fa-times"></i> Close</button>               
+                        </div>-->
+                    </div>
+                </div>    
+            </div>
+            
+    
+            <!-- Coming Soon -->
+            <section id="ComingSoon">
+                <div class="Container">
+                    <h2>Coming Soon</h2>
+                    <div class="row Games">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/Ebooks/ComingSoon/ThisBrightFuture/tbf.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/Ebooks/ComingSoon/JujutsuKaisen/jujutsukaisen.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/Ebooks/ComingSoon/AbandonedDeath/abd.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/Ebooks/ComingSoon/DemonSlayer/ds.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/Ebooks/ComingSoon/Mha/Mha.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/Ebooks/ComingSoon/OnceUponABrokenHeart/ouabh.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/Ebooks/ComingSoon/RebelsKarma/rbk.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/Ebooks/ComingSoon/ShadowStorm/ss.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/Ebooks/ComingSoon/TargetAcquired/tmta.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/Ebooks/ComingSoon/ThePresidentsDaughter/Tprd.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                   
+                   
+                    </div>
+                
+                </div>
+            </section>
+        
+            <!-- Paperback-->
+            <section id="Paperback">
+                <div class="Container">
+                    <h2>Paperback</h2>
+                    <div class="row Games">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a th:href="@{/boruto}">
+                                    <img src="./images/EBooks/Paperback/Boruto/b.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Paperback/black clover/bd.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Paperback/call of hte night/c.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Paperback/dr stone/s.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Paperback/fullmwtal alchemist/f.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Paperback/haikyuu/h.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Paperback/jojos/j.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Paperback/onepiece/o.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Paperback/the promise neverland/p.jpg"></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Sci-Fi -->
+            <section id="SciFi">
+                <div class="Container">
+                    <h2>Science Fiction</h2>
+                    <div class="row Games">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/SciFi/1984/1.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/SciFi/doomsday book/dd.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/SciFi/dune/d.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/SciFi/the lord of the rings/l.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/SciFi/the martian/m.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/SciFi/the time machine/tt.jpg"></a>
+                                </div>
+                            </div>
+                           
+                           
+                            
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="#"><img src="./images/EBooks/SciFi/divergent/d.jpg"></a>
+                            </div>
+                        </div>  
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+             <!-- Romance -->
+             <section id="Romance">
+                <div class="Container">
+                    <h2>Romance</h2>
+                    <div class="row Games">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Romance/vampire diaries/v.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Romance/after/after.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Romance/beautiful disaster/b.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Romance/fifty shades of grey/fff.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Romance/outlander/o.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Romance/riverdale/r.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Romance/the originals/o.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Romance/twilight/t.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </section>    
+    
+             <!-- Mystery -->
+             <section id="Mystery">
+                <div class="Container">
+                    <h2>Mystery</h2>
+                    <div class="row Games">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Mystery/and then there were none/a.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Mystery/godfather/g.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Mystery/mystic river/m.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Mystery/shutter island/s.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Mystery/sherlock holmes/f69ad46f33a5ce68edcbe52801629cd6.jpg"></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Horror -->
+            <section id="Horror">
+                <div class="Container">
+                    <h2>Horror</h2>
+                    <div class="row Games">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Horror/anna dressed in blood/a.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Horror/bird box/b.jpeg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Horror/collected ghost stories/c.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Horror/dracula/d.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Horror/frankenstein/f.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#"><img src="./images/EBooks/Horror/the exorcist/e.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            
+    
+            <!-- Footer Section-->
+               <footer id="footer">
+                   <i class="social-icon fa fa-envelope"></i>
+                   <br> 
+                   <a href="index.html" class="footername">Read n Game</a><span> by Fahman,Zahoor and Umaid </span>
+               </footer>
+    
+               <a href="#" class="scroll-to-top rounded js-scroll-trigger">
+                   <i class="fa fa-angle-up"></i>
+               </a>
+        </div>
+    </div>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="main.js">
+    </script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  
+    
+    <script type="text/javascript">
+    
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').fadeOut();
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').fadeIn();
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+
+        // on preview show iframe
+    $('#myModalPrev').on('show.bs.modal', function (e) {
+       var idVideo = $(e.relatedTarget).data('id');
+       $('#myModalPrev .modal-body').html('<iframe width="100%" height="400px" src="https://www.youtube.com/embed/' + idVideo + '?autoplay=true" frameborder="0" allowfullscreen></iframe>');
+     });
+     //on close remove
+     $('#myModalPrev').on('hidden.bs.modal', function () {
+        $('#myModalPrev .modal-body').empty();
+     });  
+
+
+     (function($){
+    ("use strict");
+
+    // closes the sidebar menu
+    $(".menu-toggle").click(function(e){
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+        $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times ").toggleClass(
+            "fa-bars fa-times"
+        );
+        $(this).toggleClass("active");
+    });
+
+    //smooth scrolling using jQuery and easing
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function(){
+        if(
+            location.pathname.replace(/^\//,"")== this.pathname.replace(/^\//,"") 
+            && location.hostname == this.hostname){
+                var target = $(this.hash);
+                target = target.length ? target : $("[name= "+ this.hash.slice(1)+ "]");
+                if(target.length){
+                    $("html, body").animate({
+                        scrollTop: target.offset().top,
+                    },
+                    1000,
+                    "easeInOutExpo"
+                    );
+                    return false;
+                }
+            }
+        });
+        $('#sidebar-wrapper .js-scroll-trigger').click(function(){
+            $("#sidebar-wrapper").removeClass("active");
+            $('#menu-toggle').removeClass("active");
+            $(".menu-toggle > fa.bars, .menu-toggle > .fa-times").toggleClass(
+                "fa-bars fa-times"
+            );  
+        });
+        $(document).scroll(function() {
+            var scrollDistance = $(this).scrollTop();
+            if(scrollDistance > 100){
+                $(".scroll-to-top").fadeIn();
+            }
+            else{
+                $(".scroll-to-top").fadeOut();
+            }
+        });
+})(jQuery);
+    </script>
+     
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Registration Succeeded</title>
+	<link rel="stylesheet" type="text/css" 
+	href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<style>
+    @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+    body {
+          font-family: 'Poppins', sans-serif;
+          background-color: #1a1a2e;
+          padding-top: 40px;
+          padding-bottom: 40px;
+    }
+    html {
+        font-family: sans-serif;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+    }
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+    h1{
+          color: #6d7fcc;
+    }
+    label{
+        color: #6d7fcc;
+    }
+</style>
+</head>
+<body>
+	<div class="container text-center">
+		<div>
+			<h1>Sign-up Complete</h1>
+			<h3><a th:href="@{/login}">Click here to Login</a></h3>
+		</div>
+	
+	
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="val.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>valorant</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="logo.png" alt=""></a>
+        <div class="toggle"><a href="..//..//index.html"><img src="toggle.png" alt=""></a></div> 
+    </header>
+    <div class="banner">
+        <div class="content">
+
+            <h2><span>valorant</span></h2>
+            <p>
+                VALORANT is a competitive tactical shooter from the first-person perspective. It takes place on a near-future Earth and features a cast of characters known as Agents, each of which have their own unique set of abilities to create tactical opportunities.
+            </p>
+            <a href="#" class="play" onclick="toggle();"><img src="play.png" alt="">watch trailer</a>
+            <br>
+            <a href="#" class="play-gameplay" onclick="toggle1();"><img src="play.png" alt="">watch gameplay</a>
+            
+            
+        </div>
+        
+
+    </div>
+    <div class="trailer">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/e_E9W2vsRbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img src="close.png" alt="" class="close" onclick="toggle();">
+    </div>
+    <div class="gameplay">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Wrdh5HrOCMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img src="close.png" alt="" class="close" onclick="toggle1();">
+    </div>
+    
+    <script>
+        function toggle(){
+        var trailer=document.querySelector('.trailer');
+        let video=document.querySelector('.iframe');
+        trailer.classList.toggle('active');
+        video.currentTime = 0;
+        video.pause();}
+        function toggle1(){
+        var gameplay=document.querySelector('.gameplay');
+        let video=document.querySelector('.iframe');
+        gameplay.classList.toggle('active');
+        video.currentTime = 0;
+        video.pause();}
+    </script>
+     
+</body>
+</html>
