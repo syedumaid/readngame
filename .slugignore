@@ -1,10 +1,6 @@
 .m2
 *.psd
-*.gif
-*.jpeg
-*.png
 *.pdf
-/test
 /spec
 /target
 
