@@ -1,5 +1,7 @@
 .m2
 *.psd
+*.svg
+*.png
 *.pdf
 /spec
 /target
