@@ -37,7 +37,7 @@ node_modules/
 
 # Ignore metadata
 metadata
-*.metadata
+.metadata/
 
 # Ignore Logs
 logs
