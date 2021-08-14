@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assassin's Creed Valhalla : Wrath of the Druids</title>
+
+    <style>
+        /* @import url('https://fonts.googleapis.com/
+css?family=poppins:200,300,400,500,600,700,800,900&display=swap'); */
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+header .logo{
+    max-width: 120px;
+}
+header .toggle{
+    max-width: 60px;
+    cursor: pointer;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 115vh;
+    padding: 0 100px;
+    background: url(/images/Games/LatestGames/AC-Valhalla-WrathOfDruids-DLC/wrathofthedruids.jpg);
+    background-position: center;
+    background-repeat: no-repeat, repeat;
+    background-size:cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.banner .content{
+    max-width: 550px;
+}
+.banner .content h2{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+    color: rgb(247, 245, 245);
+}
+.banner .content h2 span{
+    font-weight: 800;
+    
+}
+.banner .content p{
+    
+    font-weight: 300;
+    font-size: 1.2em;
+    letter-spacing: 0.02em;
+    line-height: 1.5em;
+    color: rgb(252, 252, 252);
+    margin: 15px 0 35px;
+}
+.play{
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(245, 240, 240);
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+.play img{
+    margin-right: 10px;
+    max-width: 50px;
+
+}
+.play-gameplay{
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(245, 240, 240);
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+.play-gameplay   img{
+    margin-right: 10px;
+    max-width: 50px;
+
+}
+.trailer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.trailer.active{
+    visibility: visible;
+    opacity: 1;
+}
+.trailer video{
+    max-width: 900px;
+    outline: none;
+}
+.trailer .close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+}
+.gameplay{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.gameplay.active{
+    visibility: visible;
+    opacity: 1;
+}
+.gameplay video{
+    max-width: 900px;
+    outline: none;
+}
+.gameplay .close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+}
+.close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+}
+@media (max-width: 991px){
+    header{
+        padding: 20px 50px;
+    }
+    header{
+        padding: 20px 50px;
+    }
+    header .logo{
+        max-width: 80px;
+    }
+    header .toggle{
+        max-width: 40px;
+    }
+    .banner{
+        padding: 100px 50px;
+    }
+    .banner .content h2{
+        font-weight: 400;
+        font-size: 2em;
+        letter-spacing: 0.05em; 
+    }
+    .banner .content p{
+        font-size: 1em;
+    }
+    .trailer video{
+        max-width: 90%;
+        outline: none;
+    }
+}
+    </style>
+
+   
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="logo.png" alt=""></a>
+        <div class="toggle">
+            <a href="..//..//..//..//index.html"><img src="toggle.png" alt=""></a>
+        </div> 
+    </header>
+    <div class="banner">
+        <div class="content">
+            
+            <h2><span>Assassin's Creed Valhalla : Wrath of the Druids</span></h2>
+            <p>
+                Wrath of the Druids is a downloadable content expansion package for Assassin's Creed: Valhalla, 
+                that was released on May 13, 2021. 
+                It is the first out of two expansion packs for the game, alongside The Siege of Paris.
+                Explore the haunted wilds and beautiful landscapes of Ireland as you battle a druidic cult 
+                known as the Children of Danu. 
+                Conquer ring forts, master the art of smuggling, and gain the favor of Gaelic kings 
+                in a new open-world adventure.
+            </p>
+             
+            <a href="#" class="play" data-id="Bl97cP_U1ME" data-target="#myModalPrev" data-toggle="modal">
+            <img src="play.png">Watch Trailer</a>
+            <br>
+            <a href="#" class="play" data-id="XB05KLCIxA0" data-target="#myModalPrev" data-toggle="modal">
+                <img src="play.png">Watch gameplay</a>
+            
+
+
+        </div>
+    </div>
+   
+
+
+<div class="modal fade" id="myModalPrev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <img src="close.png" class="close" data-dismiss="modal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+             <!--<div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                <h4 id="myModalLabel" class="semi-bold">a way out<strong></strong>.</h4> 
+            </div>
+            <hr>-->
+            <div class="modal-body" id="trailer">
+                Modal Content
+            </div>
+            <!--<hr>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-primary"><i class="fa fa-times"></i> Close</button>               
+            </div>-->
+        </div>
+    </div>    
+</div>
+
+<script> // on preview show iframe
+    $('#myModalPrev').on('show.bs.modal', function (e) {
+       var idVideo = $(e.relatedTarget).data('id');
+       $('#myModalPrev .modal-body').html(
+           '<iframe width="100%" height="400px" src="https://www.youtube.com/embed/' + idVideo + 
+           '?autoplay=true" frameborder="0" allowfullscreen></iframe>');
+     });
+     //on close remove
+     $('#myModalPrev').on('hidden.bs.modal', function () {
+        $('#myModalPrev .modal-body').empty();
+     });  
+      </script>
+
+
+</body>
+</html>

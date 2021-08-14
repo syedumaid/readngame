@@ -77,9 +77,9 @@
                         <li>
                             <a href="#ClassicGames">Classics</a>
                         </li>
-                        <li>
+                        <!--<li>
                             <a href="#OtherGames">Other</a>
-                        </li>
+                        </li>-->
                     </ul>
                 </li>
                 <li>
@@ -105,9 +105,9 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <!--<li>
                     <a href="#">Minigames</a>
-                </li>
+                </li>-->
                 <li>
                     <a href="#">About</a>
                 </li>
@@ -156,7 +156,7 @@
                         </li>
                         
                         <li class="nav-item" style="text-indent:2em;">
-                         <form th:action = "@{logout}" method = "post">
+                         <form th:action = "@{/login}" method = "post">
 							<input style="background-color:#1a1a2e;color:#f3e6e3;"type = "submit" value = "Sign Out" />
 							</form>
                          </li>
@@ -223,7 +223,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/UpcomingGames/Halo-Infinite/haloinfinite.jpg"></a>
+                                    <a th:href="@{/HaloInfinite}"><img src="./images/Games/UpcomingGames/Halo-Infinite/haloinfinite.jpg"></a>
                                 </div>
                                 <div class="col-6">
                                     <a href="#"><img src="./images/Games/UpcomingGames/f1-2021/f12021.jpg"></a>
@@ -272,60 +272,60 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/TopRatedGames/Red-Dead-Redemption-2/reddeadredemption2.jpg"></a>
+                                    <a th:href="@{RedDeadRedemption2}"><img src="./images/Games/TopRatedGames/Red-Dead-Redemption-2/reddeadredemption2.jpg"></a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/TopRatedGames/Witcher3/witcher3.jpg"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="row">
-                                <div class="col-6">
-                                    <a href="#"><img src="./images/Games/TopRatedGames/Spiderman-Ps4/spiderman-cover-resize.png"></a>
-                                </div>
-                                <div class="col-6">
-                                    <a href="#"><img src="./images/Games/TopRatedGames/Uncharted-4-Theif's-End/uncharted-4-a-thiefs-end-box-art-cover-resize.jpg"></a>
+                                    <a th:href="@{Witcher3}"><img src="./images/Games/TopRatedGames/Witcher3/witcher3.jpg"></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/TopRatedGames/Bloodborne/bloodbornebox-resize.jpg"></a>
+                                    <a th:href="@{SpidermanPS4}"><img src="./images/Games/TopRatedGames/Spiderman-Ps4/spiderman-cover-resize.png"></a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/TopRatedGames/Resident-Evil-2/residentevil2.jpg"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="row">
-                                <div class="col-6">
-                                    <a href="#"><img src="./images/Games/TopRatedGames/Meta-Gear-Phantom-Pain/metalgearphantompain.jpg"></a>
-                                </div>
-                                <div class="col-6">
-                                    <a href="#"><img src="./images/Games/TopRatedGames/God-of-War-2018/godofwar-cover2-resize.jpg"></a>
+                                    <a th:href="@{Uncharted4}"><img src="./images/Games/TopRatedGames/Uncharted-4-Theifs-End/uncharted-4-a-thiefs-end-box-art-cover-resize.jpg"></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/TopRatedGames/AC-Syndicate/acsyndicate.jpg"></a>
+                                    <a th:href="@{Bloodborne}"><img src="./images/Games/TopRatedGames/Bloodborne/bloodbornebox-resize.jpg"></a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/TopRatedGames/COD-MW/codmodernwarfare.jpg"></a>
+                                    <a th:href="@{ResidentEvil2}"><img src="./images/Games/TopRatedGames/Resident-Evil-2/residentevil2.jpg"></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/TopRatedGames/Legend-of-Zelda/zeldabreathofthewild-resize.jpg"></a>
+                                    <a th:href="@{MetalGearPhantom}"><img src="./images/Games/TopRatedGames/Meta-Gear-Phantom-Pain/metalgearphantompain.jpg"></a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/TopRatedGames/Doom-Eternal/doometernal.jpg"></a>
+                                    <a th:href="@{/GodofWar}"><img src="./images/Games/TopRatedGames/God of War/godofwar-cover2-resize.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a th:href="@{/ACSyndicate}"><img src="./images/Games/TopRatedGames/AC-Syndicate/acsyndicate.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a th:href="@{/CODMW}"><img src="./images/Games/TopRatedGames/COD-MW/codmodernwarfare.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a th:href="@{LegendofZelda}"><img src="./images/Games/TopRatedGames/Legend-of-Zelda/zeldabreathofthewild-resize.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a th:href="@{DoomEternal}"><img src="./images/Games/TopRatedGames/Doom-Eternal/doometernal.jpg"></a>
                                 </div>
                             </div>
                         </div>
@@ -341,30 +341,30 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/LatestGames/residentevil8/village.jpg"></a>
+                                    <a th:href="@{/Village}"><img src="./images/Games/LatestGames/residentevil8/village.jpg"></a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/LatestGames/Little-Nightmares-2/littlenightmares2.jpg"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="row">
-                                <div class="col-6">
-                                    <a href="#"><img src="./images/Games/LatestGames/It-Takes-2/ittakestwo.jpg"></a>
-                                </div>
-                                <div class="col-6">
-                                    <a href="#"><img src="./images/Games/LatestGames/AC-Valhalla-WrathOfDruids-DLC/wrathofthedruids.jpg"></a>
+                                    <a th:href="@{/LittleNightmares2}"><img src="./images/Games/LatestGames/Little-Nightmares-2/littlenightmares2.jpg"></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/LatestGames/hitman 3/hitman3.jpg"></a>
+                                    <a th:href="@{/ItTakesTwo}"><img src="./images/Games/LatestGames/It-Takes-2/ittakestwo.jpg"></a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/LatestGames/Marvels-Avengers/marvelavengers.jpg"></a>
+                                    <a th:href="@{/ACValhalla}"><img src="./images/Games/LatestGames/AC-Valhalla-WrathOfDruids-DLC/wrathofthedruids.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a th:href="@{/Hitman3}"><img src="./images/Games/LatestGames/hitman 3/hitman3.jpg"></a>
+                                </div>
+                                <div class="col-6">
+                                    <a th:href="@{/MarvelsAvengers}"><img src="./images/Games/LatestGames/Marvels-Avengers/marvelavengers.jpg"></a>
                                 </div>
                             </div>
                         </div>
@@ -392,21 +392,21 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/OnlineMultiplayers/apex/images.jpg"></a>
+                                    <a th:href="@{/apex}"><img src="./images/Games/OnlineMultiplayers/apex/images.jpg"></a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="#">
-                                    <img src="./images/Games/OnlineMultiplayers/f1 2021/f12021.jpg"></a>
+                                    <a th:href="@{/warzone}">
+                                    <img src="./images/Games/OnlineMultiplayers/COD-warzone/640531-call-of-duty-warzone-xbox-one-front-cover.jpg"></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/OnlineMultiplayers/fortnite/cd040f421a02b7f445928bdd20bcb2a9.jpg"></a>
+                                    <a th:href="@{fortnite}"><img src="./images/Games/OnlineMultiplayers/fortnite/cd040f421a02b7f445928bdd20bcb2a9.jpg"></a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/OnlineMultiplayers/motogp/motogp-21-box-image.jpg"></a>
+                                    <a th:href="@{minecraft}"><img src="./images/Games/OnlineMultiplayers/Minecraft/mc.jpg"></a>
                                 </div>
                             </div>
                         </div>
@@ -417,14 +417,14 @@
                                     <img src="./images/Games/OnlineMultiplayers/pubg/bdbd7cb46163eea97cbfa113064e7c37.jpg"></a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/OnlineMultiplayers/rocketleague/rocketleague.jpg"></a>
+                                    <a th:href="@{/rocket}"><img src="./images/Games/OnlineMultiplayers/rocketleague/rocketleague.jpg"></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="#"><img src="./images/Games/OnlineMultiplayers/League-of-Legends/League of Legends PC.jpg"></a>
+                                    <a th:href="@{/leagueoflegends}"><img src="./images/Games/OnlineMultiplayers/League-of-Legends/League of Legends PC.jpg"></a>
                                 </div>
                                 <div class="col-6">
                                     <a th:href="@{/valorant}">
