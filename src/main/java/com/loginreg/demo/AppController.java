@@ -196,6 +196,11 @@ public class AppController {
 		public String viewHalo() {
 			return "UpcomingGames/Halo-Infinte/haloinfinte.jpg";
 	}
+//	@GetMapping("/chat")
+//		public String viewChat() {
+//		
+//		return "chat.html";
+//	}
 	
 }
 
