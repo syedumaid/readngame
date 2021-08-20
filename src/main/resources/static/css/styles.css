@@ -2,7 +2,22 @@ body,html {
     margin: 0;
     background-color: rgba(40, 42, 54, 1) !important;
 }
+header{
+    position: absolute;
+    margin-left : 80%;
+    top: 0;
+    left: 0%;
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 1000;
+}
 
+header .toggle{
+    max-width: 60px;
+    cursor: pointer;
+}
 .card {
     height: 500px;
     border-radius: 15px !important;

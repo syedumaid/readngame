@@ -15,6 +15,11 @@
 
 </head>
 <body>
+<header>
+        <div class="toggle">
+            <a th:href="@{/index}"><img src="./images/toggle.png" alt=""></a>
+        </div> 
+    </header>
 
 <div class="container-fluid h-100">
 
@@ -26,6 +31,7 @@
         <div class="main row justify-content-center h-100">
             <form id="login-form" name="login-form">
                 <div class="input-group">
+                
                     <input id="username" type="text" class="form-control all-input" autocomplete="off" placeholder="Username" />
                     <div class="input-group-append">
                         <button class="fas fa-location-arrow" type="submit"></button>

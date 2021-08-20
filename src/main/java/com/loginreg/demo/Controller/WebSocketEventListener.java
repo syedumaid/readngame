@@ -33,7 +33,7 @@ public class WebSocketEventListener {
 		final String username = (String) headerAccessor.getSessionAttributes().get("username");
 		
 		final ChatMessage chatMessage = ChatMessage.builder()
-				.type(MessageType.DISCONNET)
+				.type(MessageType.DISCONNECT)
 				.sender(username)
 				.build();
 		

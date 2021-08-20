@@ -194,13 +194,18 @@ public class AppController {
 	}
 	@GetMapping("/HaloInfinite")
 		public String viewHalo() {
-			return "UpcomingGames/Halo-Infinte/haloinfinte.jpg";
+			return "UpcomingGames/Halo-Infinte/haloinfinte.html";
 	}
 //	@GetMapping("/chat")
 //		public String viewChat() {
 //		
 //		return "chat.html";
 //	}
+	
+	@GetMapping("/OnePiece")
+		public String viewOnePiece() {
+		return "Books/Paperback/One Piece/onepiece.html";
+	}
 	
 }
 
