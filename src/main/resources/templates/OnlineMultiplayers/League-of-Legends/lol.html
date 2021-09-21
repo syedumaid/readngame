@@ -23,6 +23,12 @@ crossorigin="anonymous"></script>
    
 </head>
 <body>
+<header>
+        <a href="#" class="logo"><img src="logo.png" alt=""></a>
+        <div class="toggle">
+            <a th:href="@{/index}"><img src="./images/toggle.png" alt=""></a>
+        </div> 
+    </header>
     <div class="banner">
         <div class="content">
 
@@ -30,9 +36,9 @@ crossorigin="anonymous"></script>
             <p>
                 League of Legends is a team-based strategy game where two teams of five powerful champions face off to destroy the other's base. Choose from over 140 champions to make epic plays, secure kills, and take down towers as you battle your way to victory.
              </p>
-            <a href="#" class="play" data-id="7O21Z6vgtmY" data-target="#myModalPrev" data-toggle="modal"><img src="play.png">Watch Trailer</a>
+            <a href="#" class="play" data-id="7O21Z6vgtmY" data-target="#myModalPrev" data-toggle="modal"><img src="./images/play.png">Watch Trailer</a>
             <br>
-            <a href="#" class="play" data-id="6jRfu885ynE" data-target="#myModalPrev" data-toggle="modal"><img src="play.png">Watch gameplay</a>
+            <a href="#" class="play" data-id="6jRfu885ynE" data-target="#myModalPrev" data-toggle="modal"><img src="./images/play.png">Watch gameplay</a>
             
 
 
@@ -42,20 +48,21 @@ crossorigin="anonymous"></script>
 
 
 <div class="modal fade" id="myModalPrev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <img src="./images/close.png" class="close" data-dismiss="modal" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 id="myModalLabel" class="semi-bold">league of legends <strong></strong>.</h4>
+             <!--<div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                <h4 id="myModalLabel" class="semi-bold">a way out<strong></strong>.</h4> 
             </div>
-            <hr>
-            <div class="modal-body">
+            <hr>-->
+            <div class="modal-body" id="trailer">
                 Modal Content
             </div>
-            <hr>
+            <!--<hr>
             <div class="modal-footer">
                 <button type="button" data-dismiss="modal" class="btn btn-primary"><i class="fa fa-times"></i> Close</button>               
-            </div>
+            </div>-->
         </div>
     </div>    
 </div>

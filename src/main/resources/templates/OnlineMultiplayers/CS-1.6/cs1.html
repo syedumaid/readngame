@@ -23,6 +23,12 @@ crossorigin="anonymous"></script>
    
 </head>
 <body>
+<header>
+        <a href="#" class="logo"><img src="logo.png" alt=""></a>
+        <div class="toggle">
+            <a th:href="@{/index}"><img src="./images/toggle.png" alt=""></a>
+        </div> 
+    </header>
     <div class="banner">
         <div class="content">
 
@@ -31,9 +37,9 @@ crossorigin="anonymous"></script>
                 Counter-Strike is an objective-based, multiplayer first-person shooter. Two opposing teams—the Terrorists and the Counter Terrorists—compete in game modes to complete objectives, such as securing a location to plant or defuse a bomb and rescuing or guarding hostages.
             </p>
              
-            <a href="#" class="play" data-id="2xQLOK3kJK8" data-target="#myModalPrev" data-toggle="modal"><img src="play.png">Watch Trailer</a>
+            <a href="#" class="play" data-id="2xQLOK3kJK8" data-target="#myModalPrev" data-toggle="modal"><img src="./images/play.png">Watch Trailer</a>
             <br>
-            <a href="#" class="play" data-id="oIoueckSEtU" data-target="#myModalPrev" data-toggle="modal"><img src="play.png">Watch gameplay</a>
+            <a href="#" class="play" data-id="oIoueckSEtU" data-target="#myModalPrev" data-toggle="modal"><img src="./images/play.png">Watch gameplay</a>
             
 
 
@@ -44,19 +50,12 @@ crossorigin="anonymous"></script>
 
 <div class="modal fade" id="myModalPrev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 id="myModalLabel" class="semi-bold">counter strike: <strong>1.6</strong>.</h4>
-            </div>
-            <hr>
+        
             <div class="modal-body">
                 Modal Content
             </div>
-            <hr>
-            <div class="modal-footer">
-                <button type="button" data-dismiss="modal" class="btn btn-primary"><i class="fa fa-times"></i> Close</button>               
-            </div>
+            
+            
         </div>
     </div>    
 </div>

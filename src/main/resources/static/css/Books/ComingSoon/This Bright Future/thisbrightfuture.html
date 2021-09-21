@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bright Future</title>
+<style>
+        /*body{
+            background:url(./bar.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: top;
+        }*/
+        .main-box{
+            /*background-image: url(./naruto.gif.crdownload);
+            background-repeat: no-repeat;
+            background-size: cover;*/
+            
+            border: 3px solid green;
+            border:hidden;
+            /*height: 639px;
+            width: 600px;*/
+            position: absolute;
+            top:   10%;
+            left:12%;
+            
+            /*margin-top: 100px;            
+            margin-left: 430px;*/
+            
+            border-radius: 10px;
+        
+        }
+        img:hover{
+            transform: translateY(-5px);
+            transition: 0.8s;
+            
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+            
+        }
+        a{
+            
+            position: relative;
+              display: inline-flex;
+              justify-content: flex-start;
+          align-items: center;
+          color: rgb(247, 241, 241);
+         text-transform: uppercase;
+          font-weight: 500;
+          text-decoration: none;
+              letter-spacing: 2px;
+            font-size: 2.6em;
+            border: 3px solid;
+            /*padding: 2px;
+            margin: 10px;*/
+        }
+        .head{
+            text-align: center;
+            color: white;
+        }
+        p{
+            margin: -10px; 
+        }
+        header .toggle{
+    		max-width: 60px;
+    		cursor: pointer; 
+		}
+        
+    </style>
+</head>
+<body>
+ <header>
+        <div class="toggle" style=" position: absolute;
+    top: 0;
+    left: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 1000;">
+            <a th:href="@{/ebooks#Paperback}"><img src="./images/toggle.png" alt=""></a>
+        </div> 
+    </header>
+    <div class="main-box">
+        <div class="head">
+            <img src="./images/EBooks/ComingSoon/ThisBrightFuture/tbf.jpg" 
+            style="height: 300px;border-radius:8px;margin-top: 10px;" >
+            <br>
+            <br>
+            
+            <p style="text-align: center;font-size:2.0em;">This Bright Future</p>
+            
+            <p style="text-align: center;font-size: 1.8em;">A Memoir</p>
+            <br>
+            
+            <hr>
+            <br>
+            <p> This Bright Future is a raw and unfiltered journey into the . ...</p>
+<br>
+            <p>life and mind of Bobby Hall, who emerged from the wreckage of a horrifically abusive childhood to become an era-defining artist of our tumultuous age.
+                </p>
+            <br>
+            <hr>
+
+            <a href="https://www.amazon.com/exec/obidos/ASIN/1982158247?tag=simonsayscom">
+                <i class="fas fa-shopping-cart"style="padding-right:10px;"></i> BUY NOW</a>
+               
+               <a href="https://books.google.co.in/books?id=KN0YEAAAQBAJ">
+                <i class="fas fa-book-open" style="padding-right:18.5px;"></i>PREVIEW</a> 
+        </div>
+        
+    </div>
+</body>
+</html>

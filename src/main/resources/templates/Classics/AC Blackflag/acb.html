@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+<script
+src="https://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assassin's Creed IV: Black Flag</title>
+    <link rel="stylesheet" href="./css/Games/GamingPages/Classics/AC Blackflag/rsv.css">
+
+   
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="logo.png" alt=""></a>
+        <div class="toggle">
+            <a th:href="@{/index}"><img src="./images/toggle.png" alt=""></a>
+        </div> 
+    </header>
+    <div class="banner">
+        <div class="content">
+            
+            <h2><span>Assassin's Creed IV: Black Flag</span></h2>
+            <p>
+                The main story is set in the 18th century Caribbean during the Golden Age of Piracy,
+                 and follows notorious Welsh pirate Edward Kenway, grandfather and father of Assassin's Creed III
+                 protagonist Ratonhnhaké:ton and antagonist Haytham Kenway, respectively, 
+                 who stumbles upon the Assassin/Templar conflict.
+
+            </p>
+             
+            <a href="#" class="play" data-id="OwVe4ZNeQZk" data-target="#myModalPrev" data-toggle="modal"><img src="./images/play.png">Watch Trailer</a>
+            <br>
+            <a href="#" class="play" data-id="rAXiWC-I5XA" data-target="#myModalPrev" data-toggle="modal"><img src="./images/play.png">Watch gameplay</a>
+            
+
+
+        </div>
+    </div>
+   
+
+
+<div class="modal fade" id="myModalPrev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <img src="./images/close.png" class="close" data-dismiss="modal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+             <!--<div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                <h4 id="myModalLabel" class="semi-bold">a way out<strong></strong>.</h4> 
+            </div>
+            <hr>-->
+            <div class="modal-body" id="trailer">
+                Modal Content
+            </div>
+            <!--<hr>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-primary"><i class="fa fa-times"></i> Close</button>               
+            </div>-->
+        </div>
+    </div>    
+</div>
+
+<script> // on preview show iframe
+    $('#myModalPrev').on('show.bs.modal', function (e) {
+       var idVideo = $(e.relatedTarget).data('id');
+       $('#myModalPrev .modal-body').html('<iframe width="100%" height="400px" src="https://www.youtube.com/embed/' + idVideo + '?autoplay=true" frameborder="0" allowfullscreen></iframe>');
+     });
+     //on close remove
+     $('#myModalPrev').on('hidden.bs.modal', function () {
+        $('#myModalPrev .modal-body').empty();
+     });  
+      </script>
+
+
+</body>
+</html>

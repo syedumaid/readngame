@@ -54,7 +54,7 @@ header .toggle{
     width: 100%;
     min-height: 115vh;
     padding: 0 100px;
-    background: url(/images/Games/LatestGames/AC-Valhalla-WrathOfDruids-DLC/wrathofthedruids.jpg);
+    background: url(/images/Games/LatestGames/AC-Valhalla-WrathOfDruids-DLC/bg.jpg);
     background-position: center;
     background-repeat: no-repeat, repeat;
     background-size:cover;
@@ -226,7 +226,7 @@ header .toggle{
     <header>
         <a href="#" class="logo"><img src="logo.png" alt=""></a>
         <div class="toggle">
-            <a href="..//..//..//..//index.html"><img src="toggle.png" alt=""></a>
+            <a th:href="@{/index}"><img src="./images/toggle.png" alt=""></a>
         </div> 
     </header>
     <div class="banner">
@@ -244,10 +244,10 @@ header .toggle{
             </p>
              
             <a href="#" class="play" data-id="Bl97cP_U1ME" data-target="#myModalPrev" data-toggle="modal">
-            <img src="play.png">Watch Trailer</a>
+            <img src="./images/play.png">Watch Trailer</a>
             <br>
             <a href="#" class="play" data-id="XB05KLCIxA0" data-target="#myModalPrev" data-toggle="modal">
-                <img src="play.png">Watch gameplay</a>
+                <img src="./images/play.png">Watch gameplay</a>
             
 
 
@@ -257,7 +257,7 @@ header .toggle{
 
 
 <div class="modal fade" id="myModalPrev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <img src="close.png" class="close" data-dismiss="modal" aria-hidden="true">
+    <img src="./images/close.png" class="close" data-dismiss="modal" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
              <!--<div class="modal-header">

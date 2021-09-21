@@ -18,11 +18,17 @@ crossorigin="anonymous"></script>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>pubg</title>
-    <link rel="stylesheet" href="pubg.css">
+    <link rel="stylesheet" href="./css/Games/GamingPages/OnlineMultiplayers/PUBG/pubg.css">
 
    
 </head>
 <body>
+<header>
+        <a href="#" class="logo"><img src="logo.png" alt=""></a>
+        <div class="toggle">
+            <a th:href="@{/index}"><img src="./images/toggle.png" alt=""></a>
+        </div> 
+    </header>
     <div class="banner">
         <div class="content">
 
@@ -31,9 +37,9 @@ crossorigin="anonymous"></script>
                 Battlegrounds is a player versus player shooter game in which up to one hundred players fight in a battle royale, a type of large-scale last man standing deathmatch where players fight to remain the last alive. Players can choose to enter the match solo, duo, or with a small team of up to four people.
             </p>
              
-            <a href="#" class="play" data-id="8ycrPEjBhIo" data-target="#myModalPrev" data-toggle="modal"><img src="play.png">Watch Trailer</a>
+            <a href="#" class="play" data-id="8ycrPEjBhIo" data-target="#myModalPrev" data-toggle="modal"><img src="./images/play.png">Watch Trailer</a>
             <br>
-            <a href="#" class="play" data-id="9Aw5HJZvGEg" data-target="#myModalPrev" data-toggle="modal"><img src="play.png">Watch gameplay</a>
+            <a href="#" class="play" data-id="9Aw5HJZvGEg" data-target="#myModalPrev" data-toggle="modal"><img src="./images/play.png">Watch gameplay</a>
             
 
 
@@ -43,20 +49,21 @@ crossorigin="anonymous"></script>
 
 
 <div class="modal fade" id="myModalPrev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <img src="./images/close.png" class="close" data-dismiss="modal" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 id="myModalLabel" class="semi-bold">pubg<strong></strong>.</h4>
+             <!--<div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                <h4 id="myModalLabel" class="semi-bold">a way out<strong></strong>.</h4> 
             </div>
-            <hr>
-            <div class="modal-body">
+            <hr>-->
+            <div class="modal-body" id="trailer">
                 Modal Content
             </div>
-            <hr>
+            <!--<hr>
             <div class="modal-footer">
                 <button type="button" data-dismiss="modal" class="btn btn-primary"><i class="fa fa-times"></i> Close</button>               
-            </div>
+            </div>-->
         </div>
     </div>    
 </div>

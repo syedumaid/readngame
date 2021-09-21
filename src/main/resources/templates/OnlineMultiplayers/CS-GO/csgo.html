@@ -26,7 +26,9 @@ crossorigin="anonymous"></script>
 <body>
     <header>
         <a href="#" class="logo"><img src="logo.png" alt=""></a>
-        <div class="toggle"><a href="..//..//index.html"><img src="toggle.png" alt=""></a></div> 
+        <div class="toggle">
+            <a th:href="@{/index}"><img src="./images/toggle.png" alt=""></a>
+        </div> 
     </header>
     <div class="banner">
         <div class="content">
@@ -35,29 +37,31 @@ crossorigin="anonymous"></script>
             <p>
                 Counter-Strike: Global Offensive (CS:GO) expands upon the team-based first person shooter gameplay the original Counter-Strike pioneered when it launched in 1999. Two teams compete in multiple rounds of objective-based game modes with the goal of winning enough rounds to win the match.
             </p>
-            <a href="#" class="play" data-id="edYCtaNueQY" data-target="#myModalPrev" data-toggle="modal"><img src="play.png">watch trailer</a>
+            <a href="#" class="play" data-id="edYCtaNueQY" data-target="#myModalPrev" data-toggle="modal"><img src="./images/play.png">watch trailer</a>
             <br>
-            <a href="#" class="play" data-id="rOpariPFAeM" data-target="#myModalPrev" data-toggle="modal"><img src="play.png">watch gameplay</a>
+            <a href="#" class="play" data-id="rOpariPFAeM" data-target="#myModalPrev" data-toggle="modal"><img src="./images/play.png">watch gameplay</a>
             
             
         </div>
         
 
     </div>
-    <div class="modal fade" id="myModalPrev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModalPrev" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <img src="./images/close.png" class="close" data-dismiss="modal" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
-               
+             <!--<div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                <h4 id="myModalLabel" class="semi-bold">a way out<strong></strong>.</h4> 
             </div>
-            
-            <div class="modal-body">
+            <hr>-->
+            <div class="modal-body" id="trailer">
                 Modal Content
             </div>
-            
+            <!--<hr>
             <div class="modal-footer">
                 <button type="button" data-dismiss="modal" class="btn btn-primary"><i class="fa fa-times"></i> Close</button>               
-            </div>
+            </div>-->
         </div>
     </div>    
 </div>

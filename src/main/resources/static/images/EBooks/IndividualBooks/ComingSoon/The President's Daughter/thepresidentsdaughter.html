@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The President's Daughter</title>
-    <style>
+   <style>
         /*body{
             background:url(./bar.jpg);
             background-repeat: no-repeat;
@@ -63,11 +63,14 @@
         p{
             margin: -10px; 
         }
-        
+        header .toggle{
+    		max-width: 60px;
+    		cursor: pointer; 
+		}
         
     </style>
 </head>
-<body style="background:url(./barrr.png);
+<body style="background:url(./images/EBooks/ComingSoon/ThePresidentsDaughter/barrr.jpg);
 background-repeat : no-repeat;
 background-size:cover;
 background-position: top;
@@ -75,9 +78,21 @@ display: flex;
     justify-content: flex-start;
     
     min-height: 115vh;">
+    <header>
+        <div class="toggle" style=" position: absolute;
+    top: 0;
+    left: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 1000;">
+            <a th:href="@{/ebooks#Paperback}"><img src="./images/toggle.png" alt=""></a>
+        </div> 
+    </header>
     <div class="main-box">
         <div class="head">
-            <img src="b.jpg" style="height: 300px;border-radius:8px;margin-top: 10px;" >
+            <img src=./images/EBooks/ComingSoon/ThePresidentsDaughter/tprd.png" style="height: 300px;border-radius:8px;margin-top: 10px;" >
             <br>
             <br>
             

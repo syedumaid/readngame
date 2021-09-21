@@ -79,14 +79,9 @@ public class AppController {
 	@GetMapping("/pubg")
 	public String viewFifaPage() {
 		
-		return "/PUBG/pubg.html";
+		return "OnlineMultiplayers/PUBG/pubg.html";
 	}
 	
-	@GetMapping("/boruto")
-	public String viewBorutoPage() {
-		
-		return "/Boruto/boruto.html";
-	}
 	@GetMapping("/warzone")
 	public String viewWarzonePage() {
 		
@@ -188,13 +183,91 @@ public class AppController {
 		public String viewZelda() {
 			return "TopRatedGames/Legendofzelda/legendofzelda.html";
 	}
-	@GetMapping("/DoomEternal")
-		public String viewDoom() {
-			return "TopRatedGames/Doom/doom.html";
-	}
+	
 	@GetMapping("/HaloInfinite")
 		public String viewHalo() {
 			return "UpcomingGames/Halo-Infinte/haloinfinte.html";
+	}
+	
+	@GetMapping("/uncharted2")
+	public String viewMario() {
+		return "Classics/Uncharted2-AmongTheives/uncharted.html";
+	}
+	@GetMapping("/gtasa")
+	public String viewGtasa() {
+		return "Classics/GTA-SA/gtasa.html";
+	}
+	@GetMapping("/batman")
+	public String viewBatman() {
+		return "Classics/Batman-Arkham-City/bac.html";
+	}
+	@GetMapping("/halo2")
+	public String viewHalo2() {
+		return "Classics/Halo 2/halo2.html";
+	}
+	@GetMapping("/darksouls")
+	public String viewDark() {
+		return "Classics/Dark Souls/darksoul.html";
+	}
+	@GetMapping("/elderscrolls")
+	public String viewElder() {
+		return "Classics/Elder Scrolls V Skyrim/es5.html";
+	}
+	@GetMapping("/gtavc")
+	public String viewGtavc() {
+		return "Classics/GTA-VC/gtavc.html";
+	}
+	@GetMapping("/rdr1")
+	public String viewRdr1() {
+		return "Classics/Red Dead Redemption 1/rdr 1.html";
+	}
+	@GetMapping("/codmw")
+	public String viewCodmw() {
+		return "Classics/COD4-MW/cod1.html";
+	}
+	@GetMapping("/lastofus")
+	public String viewLastofus() {
+		return "Classics/Last-of-Us/last of us.html";
+	}
+	@GetMapping("/ac4")
+	public String viewAc4() {
+		return "Classics/AC Blackflag/acb.html";
+	}
+	@GetMapping("/re4")
+	public String viewRe4() {
+		return "Classics/RE 4/re4.html";
+	}
+	@GetMapping("/back4blood")
+	public String viewB4b() {
+		return "UpcomingGames/back4blood/Back4Blood.html";
+	}
+	@GetMapping("/Daysgone")
+	public String viewDaysGone() {
+		return "UpcomingGames/DaysGOne/DaysGone.html";
+	}
+	@GetMapping("/deathloop")
+	public String viewDeathloop() {
+		return "UpcomingGames/deathloop/deathloop.html";
+	}
+	@GetMapping("/destiny2")
+	public String viewDestiny() {
+		return "UpcomingGames/destiny2/Destiny2.html";
+	}
+	@GetMapping("/DoomEternal")
+	public String viewDoomEternal() {
+		return "UpcomingGames/Doom Eternal/DoomEternal.html";
+	}
+	@GetMapping("/f1")
+	public String viewF1() {
+		return "UpcomingGames/f12021/F12021.html";
+	}
+	@GetMapping("/GodofWar5")
+	public String viewGowR() {
+		return "UpcomingGames/God of War Ragnarok/GodofWarRagnarok.html";
+	}
+	@GetMapping("/halo2021")
+	public String viewHalo2021() {
+		return "UpcomingGames/halo 2021/Haloinfinite.html";
 	}
 //	@GetMapping("/chat")
 //		public String viewChat() {
@@ -206,7 +279,182 @@ public class AppController {
 		public String viewOnePiece() {
 		return "Books/Paperback/One Piece/onepiece.html";
 	}
-	
+	@GetMapping("/ThisBrightFuture")
+	public String viewThisBrightFuture(){
+		return "Books/ComingSoon/This Bright Future/thisbrightfuture.html";
+	}
+	@GetMapping("/PresidentsDaughter")
+	public String viewPrezDaughter() {
+		return "Books/ComingSoon/The President's Daughter/thepresidentsdaughter.html";
+	}
+	@GetMapping("/JujutsuKaisen")
+	public String viewJjk() {
+		return "Books/ComingSoon/Jujutsu Kaisen/jujutsu.html";
+	}
+	@GetMapping("/AbandonedDeath")
+	public String viewAd() {
+		return "Books/ComingSoon/Abandoned Death/abandoneddeath.html";
+	}
+	@GetMapping("/DemonSlayer")
+	public String viewDs() {
+		return "Books/ComingSoon/Demon Slayer/demonslayer.html";
+	}
+	@GetMapping("/MyHeroAcademia")
+	public String viewMha() {
+		return "Books/ComingSoon/My Hero Academia/myheroacademia.html";
+	}
+	@GetMapping("/OnceUponABrokenHeart")
+	public String viewOuabh() {
+		return "Books/ComingSoon/Once Upon A Broken Heart/onceuopnabrokenheart.html";
+	}
+	@GetMapping("/RebelsKarma")
+	public String viewRebelsKarma() {
+		return "Books/ComingSoon/Rebels Karma/rebelskarma.html";
+	}
+	@GetMapping("/ShadowStorm")
+	public String viewShadowStorm() {
+		return "Books/ComingSoon/Shadow Storm/shadowstorm.html";
+	}
+	@GetMapping("/TargetAcquired")
+	public String viewTargetAcquired() {
+		return "Books/ComingSoon/Tom Clancy's Target Acquired/tom.html";
+	}
+	@GetMapping("/Bortuo")
+	public String viewBoruto() {
+		return "Books/Paperback/Boruto/sample2.html";
+	}
+	@GetMapping("/BlackClover")
+	public String viewBlackClover() {
+		return "Books/Paperback/Black Clover/sample2.html";
+	}
+	@GetMapping("/CallofNight")
+	public String viewCallofNight() {
+		return "Books/Paperback/Call of the Night/callofthenight.html";
+	}
+	@GetMapping("/DrStone")
+	public String viewDrStone() {
+		return "Books/Paperback/Dr.Stone/drstone.html";
+	}
+	@GetMapping("/FullMetalAlchemist")
+	public String viewFma() {
+		return "Books/Paperback/Full Metal Alchemist/fullmetal.html";
+	}
+	@GetMapping("/Haikyuu")
+	public String viewHaikyuu() {
+		return "Books/Paperback/Haikyuu/haikyu.html";
+	}
+	@GetMapping("/Jojo")
+	public String viewJojo() {
+		return "Books/Paperback/Jojo's Bizzare Adventures Diamond is Unbreakable/jojo.html";
+	}
+	@GetMapping("/PromiseNeverland")
+	public String viewPnl() {
+		return "Books/Paperback/The Promised Neverland/thepromised.html";
+	}
+	@GetMapping("/1984")
+	public String viewGerogeOrwell() {
+		return "Books/Sci-Fi/1984/1984.html";
+	}
+	@GetMapping("/Doomsday")
+	public String viewDoomsday() {
+		return "Books/Sci-Fi/Doomsday Book/doomsdaybook.html";
+	}
+	@GetMapping("/Dunes")
+	public String viewDune() {
+		return "Books/Sci-Fi/Dune,The Butlerian Jihad/dune.html";
+	}
+	@GetMapping("/LordofRings")
+	public String viewLordofRings() {
+		return "Books/Sci-Fi/The Lord of the Rings/thelord.html";
+	}
+	@GetMapping("/Martian")
+	public String viewMartian() {
+		return "Books/Sci-Fi/The Martian/martin.html";
+	}
+	@GetMapping("/TimeMachine")
+	public String viewTimeMachine() {
+		return "Books/Sci-Fi/The Time Machine/thetimemachine.html";
+	}
+	@GetMapping("/Divergent")
+	public String viewDivergent() {
+		return "Books/Sci-Fi/Divergent/divergent.html";
+	}
+	@GetMapping("/BeautifulDisaster")
+	public String viewBd() {
+		return "Books/Romance/Beautiful Diaster/beautifuldisaster.html";
+	}
+	@GetMapping("/FiftyShades")
+	public String viewFiftyShades() {
+		return "Books/Romance/Fifty Shades of Grey/fiftyshadesofgrey.html";
+	}
+	@GetMapping("/Outlander")
+	public String viewOutlander() {
+		return "Books/Romance/Outlander/outlander.html";
+	}
+	@GetMapping("/Riverdale")
+	public String viewRiverdale() {
+		return "Books/Romance/Riverdale/riverdale.html";
+	}
+	@GetMapping("/AfterCollection")
+	public String viewAco() {
+		return "Books/Romance/The After Collection/theaftercollection.html";
+	}
+	@GetMapping("/TheOriginals")
+	public String viewOriginals() {
+		return "Books/Romance/The Originals/tom.html";
+	}
+	@GetMapping("/Twilight")
+	public String viewTwilight() {
+		return "Books/Romance/Twilight/twilight.html";
+	}
+	@GetMapping("/VampireDiaries")
+	public String viewVd() {
+		return "Books/Romance/Vampire Diaries/vampirediaries.html";
+	}
+	@GetMapping("/AndThenThereWereNone")
+	public String viewAttwn() {
+		return "Books/Mystery/And then there were none/andthentherewere.html";
+	}
+	@GetMapping("/GodFather")
+	public String viewGodfather() {
+		return "Books/Mystery/God Father/godfather.html";
+	}
+	@GetMapping("/MysticRiver")
+	public String viewMysticRiver() {
+		return "Books/Mystery/Mystic River/mysticriver.html";
+	}
+	@GetMapping("/ShutterIsland")
+	public String viewShutterIsland() {
+		return "Books/Mystery/Shutter Island/shutterisland.html";
+	}
+	@GetMapping("/SherlockHolmes")
+	public String viewSherlockHolmes() {
+		return "Books/Mystery/THe Complete Sherlock Holmes/thecompletesher.html";
+	}
+	@GetMapping("/AnnaDressedinBlood")
+	public String viewAnna() {
+		return "Books/Horror/Anna Dressed in Blood/annadressed.html";
+	}
+	@GetMapping("/Birdbox")
+	public String viewBirdbox() {
+		return "Books/Horror/Bird Box/birdbox.html";
+	}
+	@GetMapping("/GhostStories")
+	public String viewGs() {
+		return "Books/Horror/Collected Ghost Stories/coolectedghost.html";
+	}
+	@GetMapping("/Dracula")
+	public String viewDracula() {
+		return "Books/Horror/Dracula/dracula.html";
+	}
+	@GetMapping("/Frankenstein")
+	public String viewFra() {
+		return "Books/Horror/Frankenstein/frakenstein.html";
+	}
+	@GetMapping("/Exorcist")
+	public String viewExo() {
+		return "Books/Horror/The Excorsist/theexorcist.html";
+	}
 }
 
 	
